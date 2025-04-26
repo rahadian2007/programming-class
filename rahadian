@@ -1,0 +1,42 @@
+
+
+
+class Botol{
+string warna
+int volume
+string rasa
+boolean BisaDibawa
+
+void BotolDitutup(){}
+void BotolDibuka(){}
+void BotolDiminum(){}
+
+}
+
+Botol BotolAqua = new Botol()
+BotolAqua.warna = "merah"
+BotolAqua.volume = 5000
+BotolAqua.rasa = "lemon"
+BotolAqua.BisaDibawa = true
+
+BotolAqua.BotolDitutup()
+BotolAqua.BotolDibuka()
+BotolAqua.BotolDiminum()
+
+Botol BotolTumbler = new Botol()
+BotolTumbler.warna = "merah"
+BotolTumbler.volume = 5000
+BotolTumbler.rasa = "lemon"
+BotolAqua.BisaDibawa = true
+
+BotolTumbler.BotolDitutup(){}
+BotolTumbler.BotolDibuka(){}
+BotolTumbler.BotolDibuka(){}
+
+Botol BotolGalon = new Botol
+BotolGalon.warna = "putih"
+BotolGalon.volume = 10000
+BotolGalon.BisaDibawa = false
+
+
+
