@@ -11,7 +11,7 @@ const Counter = () => {
 
       <input 
         type="number" 
-      z  value={count} 
+        value={count} 
         onChange={(e) => setCount(Number(e.target.value))} 
         style={{ margin: "10px", textAlign: "center" }} 
       />
@@ -41,7 +41,7 @@ const LoginForm = () => {
     if (!nama || !password) {
       setError("Lengkapi Data Anda kembali!");
       return;
-    }z
+    }
     setError("");
     setIsSubmitted(true);
   };
