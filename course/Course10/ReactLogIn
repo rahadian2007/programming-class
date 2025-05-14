@@ -1,0 +1,89 @@
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>{count}</h2>
+      
+      <button onClick={() => setCount(count + 1)}>+</button>
+
+      <input 
+        type="number" 
+      z  value={count} 
+        onChange={(e) => setCount(Number(e.target.value))} 
+        style={{ margin: "10px", textAlign: "center" }} 
+      />
+
+
+    <button onClick={() => setCount(count + 1)}>-</button>
+
+    </div>
+  );
+}
+
+
+const LoginForm = () => {
+  const [nama, setNama] = useState("");
+  const [password, setPassword] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleLogout = () => {
+    setNama("");
+    setPassword("");
+    setIsSubmitted(false);
+  };
+ 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!nama || !password) {
+      setError("Lengkapi Data Anda kembali!");
+      return;
+    }z
+    setError("");
+    setIsSubmitted(true);
+  };
+
+ 
+  return (
+    <div>
+      
+    <br></br>
+
+      <div>
+      {error && <p style={{ color: "black" }}>{error}</p>}
+      </div>
+      
+      {!isSubmitted ? (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Nama:</label>
+            <input
+              type="text"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          
+          <button type="submit">Submit</button>
+        
+        </form>
+      ) : (
+        <button onClick={handleLogout}>Log Out</button>
+      )}
+    </div>
+
+  );
+};
+
+export default LoginForm
